@@ -5,9 +5,9 @@ import App from './App.vue'
 import {routes} from "./main.routes";
 
 
-const postShell = () => import (/*webpackChunkName: postShell*/ "./app/main/shared/components/post-shell.vue");
-const postForm = () => import (/*webpackChunkName: postForm*/ "./app/main/shared/components/post-form.vue");
-const block = () => import(/*webpackChunkName: block*/ "./app/main/shared/components/block.vue");
+const postShell = () => import (/*webpackChunkName: postShell*/ "./main/shared/components/post-shell.vue");
+const postForm = () => import (/*webpackChunkName: postForm*/ "./main/shared/components/post-form.vue");
+const block = () => import(/*webpackChunkName: block*/ "./main/shared/components/block.vue");
 
 
 Vue.use(VueRouter);
