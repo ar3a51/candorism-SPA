@@ -1,7 +1,7 @@
 <template>
      <form class="form-group">
-        <input type="text" class="form-input" placeholder="Username"/>
-        <input type="password" class="form-input" placeholder="Password"/>
+        <input type="text" class="form-control" placeholder="Username"/>
+        <input type="password" class="form-control" placeholder="Password"/>
         <button class="btn btn-width-100 btn-sign-in">Sign In</button>
         <button class="btn btn-width-100 btn-sign-up">Sign Up</button>
     </form>
@@ -19,7 +19,7 @@ export default {
         margin-bottom: 10%;
         width: 90%;
 
-        .form-input {
+        .form-control {
             margin-bottom: 10px;
         }
 
