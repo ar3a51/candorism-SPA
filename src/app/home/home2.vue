@@ -1,0 +1,72 @@
+<template>
+    <main>
+        <header>
+            <div class="header col-xs-12"></div>
+        </header>
+        <article>
+            <div class="banner col-xs-12"></div>
+           <!-- <div class="login-box">
+               <login-form></login-form>
+            </div> -->
+            <div class="login-box-responsive">
+                <login-form></login-form>
+            </div>
+        </article>
+    </main>
+</template>
+<script>
+const loginForm = () => import("./components/login-form");
+export default {
+    components:{
+        loginForm
+    }
+}
+</script>
+<style lang="scss" scoped>
+header {
+    height: auto;
+    float: left;
+
+    .header {
+        height: 70px;
+        background: #ffffff;
+        box-shadow: 2px 1px 5px 6px #ccc;
+        position: fixed;
+        padding: 0px;
+    }
+}
+article {
+    height: auto;
+    margin-top: 70px;
+
+    .banner {
+        background-color: brown;
+        height: 400px;
+    }
+
+    .login-box{
+        position: absolute;
+        z-index: 1000;
+        border-radius: 4px;
+        top: 30%;
+        right: 10%;
+        width: 400px;
+        height: auto;
+        background-color: white;
+        box-shadow: 2px 0px 5px 2px #ccc;
+    }
+
+    .login-box-responsive {
+        position: absolute;
+        left: 15%;
+        right: auto;
+        z-index: 1000;
+        width: 70%;
+        top: 30%;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 2px 0px 5px 2px #ccc;
+
+    }
+}
+</style>

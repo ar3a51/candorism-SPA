@@ -1,4 +1,4 @@
-const loginPage = () => import(/*webpackChunkName: login*/ "./home/home.vue");
+const loginPage = () => import(/*webpackChunkName: login*/ "./home/home2.vue");
 const mainPage = () => import(/*webpackChunkName: main*/ "./main/main.vue");
 
 const newsfeedComponent = () => import(/*webpackChunkName: newsfeed*/ "./main/newsfeed/newsfeed.vue");
