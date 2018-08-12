@@ -5,10 +5,17 @@
         </header>
         <article>
             <div class="banner col-xs-12"></div>
-           <!-- <div class="login-box">
+            <div class="login-box 
+                        d-none 
+                        d-sm-none 
+                        d-md-none 
+                        d-lg-block 
+                        d-xl-block">
                <login-form></login-form>
-            </div> -->
-            <div class="login-box-responsive">
+            </div>
+            <div class="login-box-mobile 
+                        d-lg-none 
+                        d-xl-none">
                 <login-form></login-form>
             </div>
         </article>
@@ -26,12 +33,13 @@ export default {
 header {
     height: auto;
     float: left;
+    position: fixed;
+    z-index:2000;
 
     .header {
         height: 70px;
         background: #ffffff;
         box-shadow: 2px 1px 5px 6px #ccc;
-        position: fixed;
         padding: 0px;
     }
 }
@@ -56,7 +64,7 @@ article {
         box-shadow: 2px 0px 5px 2px #ccc;
     }
 
-    .login-box-responsive {
+    .login-box-mobile {
         position: absolute;
         left: 15%;
         right: auto;
