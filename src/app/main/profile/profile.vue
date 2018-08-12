@@ -863,7 +863,7 @@
 				</svg>
 			</a>-->
 		</div>
-		 <div class="col-xl-3 order-xl-1 col-lg-6 order-lg-2 col-md-6 col-sm-12 col-xs-12">
+		<div class="col-xl-3 order-xl-1 col-lg-6 order-lg-2 col-md-6 col-sm-12 col-xs-12">
 			<div class="ui-block">
 				<div class="ui-block-title">
 					<h6 class="title">Profile Intro</h6>

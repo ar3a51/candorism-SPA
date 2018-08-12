@@ -2,16 +2,6 @@
 const candorismHeader = ()=> import('./header/candorismHeader.vue');
 const loginTab =  ()=> import('./login-tab/login-tab.vue');
 
-
-//import (/*webpackChunkName: "landingpage"*/ "../../sass/pages/landing-page.scss");
-/*import ("../../sass/theme-styles/_variables.scss");
-import ("../../sass/theme-styles/_mixins.scss");
-import ("../../sass/theme-styles/_bootstrap-customization.scss");
-import ("../../sass/theme-styles/_header.scss");
-import ("../../sass/blocks/_forms.scss");*/
-
-
-
 let app = new Vue({
     el: "#app",
     data() {
