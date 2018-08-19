@@ -1,67 +1,93 @@
 <template>
-    <section id="app" class="landing-page">
-        <div class="content-bg-wrap">
-            <div class="content-bg"></div>
-        </div>
-        <candorism-header></candorism-header>
-        <div class="header-spacer--standard"></div>
-        <div class="container">
-            <div class="row display-flex">
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                    <div class="landing-content">
-                        {{message}}
-                        <a href="#" class="btn btn-md btn-border c-white" v-on:click.stop.prevent="click">Register Now!</a>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                    <candorism-login></candorism-login>
-                </div>
+     <main>
+           
+            <div class="banner col-12">
+
             </div>
-        </div>
-    </section>
+            <div class="body col-12">
+                <cando-box>
+                    <span slot="title">blablabla</span>
+                    <div slot="content">
+                        
+                        Lorem Ipsum is simply dummy text of the printing
+                        
+                    </div>
+                </cando-box>
+                <cando-box />
+                <cando-box />
+            </div>
+            <div class="login-box 
+                        d-none 
+                        d-sm-none 
+                        d-md-none 
+                        d-lg-block 
+                        d-xl-block">
+               <login-form></login-form>
+            </div>
+            <div class="login-box-mobile 
+                        d-lg-none 
+                        d-xl-none">
+                <login-form></login-form>
+            </div>
+     </main>
 </template>
 <script>
-
-const candorismHeader = ()=> import('./header/candorismHeader.vue');
-const loginTab =  ()=> import('./login-tab/login-tab.vue');
+const candoBox = () => import ("./components/cando-box");
+const loginForm = () => import("./components/login-form");
 
 export default {
-    data() {
-        return {
-            message: "hello world",
-        }
-    },
     components: {
-        "candorism-header": candorismHeader,
-        "candorism-login": loginTab,
-    },
-    methods: {
-        click() {
-            this.message = event;
-        },
-        initProgressBar() {
-            var $progress_bar = $('.skills-item');
-
-            $progress_bar.each(function () {
-                $progress_bar.appear({ force_process: true });
-                $progress_bar.on('appear', function () {
-                    var current_bar = $(this);
-                    if (!current_bar.data('inited')) {
-                        current_bar.find('.skills-item-meter-active').fadeTo(300, 1).addClass('skills-animate');
-                        current_bar.data('inited', true);
-                    }
-                });
-            });
-        },
-    },
-    mounted() {
-        //this.initHeader();
-        this.initProgressBar();
-    },
+        candoBox,
+        loginForm
+    }
 }
 </script>
 <style lang="scss" scoped>
+main {
+    height: auto;
 
+    .banner {
+        background-color: brown;
+        height: 400px;
+    }
+
+    .body {
+        padding-top: 40px;
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        
+        div {
+            margin-top: 30px;
+        }
+    }
+
+    .login-box{
+        position: absolute;
+        z-index: 1000;
+        border-radius: 4px;
+        top: 15%;
+        right: 10%;
+        width: 400px;
+        height: auto;
+        background-color: white;
+        box-shadow: 2px 0px 5px 2px #ccc;
+    }
+
+    .login-box-mobile {
+        position: absolute;
+        left: 15%;
+        right: auto;
+        z-index: 1000;
+        width: 70%;
+        top: 15%;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 2px 0px 5px 2px #ccc;
+
+    }
+}
 </style>
-
 

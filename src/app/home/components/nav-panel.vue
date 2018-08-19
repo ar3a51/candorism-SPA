@@ -1,9 +1,9 @@
 <template>
     <div class="nav-panel col-6">
         <ul>
-            <li>Home</li>
+            <li><router-link :to="{path: '/'}">Home</router-link></li>
             <li>about</li>
-            <li>register</li>
+            <li><router-link :to="{path:'/registration'}">register</router-link></li>
         </ul>
     </div>
 </template>
@@ -21,7 +21,7 @@ export default {
             display: flex;
             align-self: center;
             list-style-type: none;
-            float: left;
+           
             
             text-align: center;
             li {
