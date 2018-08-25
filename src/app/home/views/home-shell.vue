@@ -51,7 +51,7 @@ header {
     }
 }
 article {
-    margin-top: 70px;
+    margin-top: 80px;
 }
 
 </style>
