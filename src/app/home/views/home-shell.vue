@@ -14,8 +14,8 @@
 <script>
 
 
-const logo = () => import("./components/logo");
-const navPanel = () => import ("./components/nav-panel");
+const logo = () => import("../components/home-components/logo");
+const navPanel = () => import ("../components/home-components/nav-panel");
 
 
 export default {

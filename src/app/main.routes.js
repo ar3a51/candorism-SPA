@@ -1,6 +1,6 @@
-const homeShell = () => import(/*webpackChunkName: login*/ "./home/home-shell");
-const home = () => import (/*webpackChunkName*: home*/ "./home/home");
-const regPage = () => import (/*webpackChunkName: regPage*/ "./home/registration");
+const homeShell = () => import(/*webpackChunkName: login*/ "./home/views/home-shell");
+const { homeRoutesChildren } = require("./home/home.routes");
+
 
 const mainPage = () => import(/*webpackChunkName: main*/ "./main/main.vue");
 
@@ -12,14 +12,7 @@ export const routes = [
         path: '/', 
         component: homeShell,
         children: [
-           {
-               path: "/",
-               component: home
-           },
-           {
-               path:"/registration",
-               component: regPage,
-           }
+          ...homeRoutesChildren
         ]
     },
     {

@@ -32,8 +32,8 @@
      </main>
 </template>
 <script>
-const candoBox = () => import ("./components/cando-box");
-const loginForm = () => import("./components/login-form");
+const candoBox = () => import ("../../components/home-components/cando-box");
+const loginForm = () => import("../../components/home-components/login-form");
 
 export default {
     components: {
