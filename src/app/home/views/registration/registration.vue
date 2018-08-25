@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="col-11 user-details float-left">
-            <div class="col-6">
+            <div class="col-6 float-left">
                 <fieldset class="form-group">
                     <label for="name">Nama</label>
                     <input type="text" class="form-control" name="Nama" id="Nama" readonly/>
@@ -30,15 +30,25 @@
                         <div class="form-check form-check-inline">
                             
                             <input type="radio" name="gender" id="lk" value="lk" class="form-check-input">
-                            <label class="form-check-label" for="lk">Male</label>
+                            <label class="form-check-label" for="lk">Laki-laki</label>
                         </div>
                         <div class="form-check form-check-inline">
                             
                             <input type="radio" name="gender" id="pr" value="pr" class="form-check-input">
-                            <label class="form-check-label" for="pr">Female</label>
+                            <label class="form-check-label" for="pr">Perempuan</label>
                         
                         </div>
                     </div>
+                </fieldset>
+            </div>
+            <div class="col-6 float-left">
+                <fieldset class="form-group">
+                    <label for="namakel">Nama Keluarga</label>
+                    <input type="text" class="form-control" readonly name="namakel" id="" />
+                </fieldset>
+                 <fieldset class="form-group">
+                    <label for="status">Status</label>
+                    <input type="text" class="form-control" readonly name="status" id="" />
                 </fieldset>
             </div>
         </div>
@@ -83,8 +93,8 @@ export default {
            .form-check {
                margin-right: 60px;
 
-              .form-check-input {
-                   margin-right: 10px;
+              .form-check-label {
+                   margin-left: 40px;
                }
            }
        }

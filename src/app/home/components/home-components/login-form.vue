@@ -3,12 +3,18 @@
         <input type="text" class="form-control" placeholder="Username"/>
         <input type="password" class="form-control" placeholder="Password"/>
         <button class="btn btn-width-100 btn-sign-in">Sign In</button>
-        <button class="btn btn-width-100 btn-sign-up">Sign Up</button>
+        <button class="btn btn-width-100 btn-sign-up" @click="signUp">Sign Up</button>
     </form>
 </template>
 <script>
 export default {
-    
+    methods:{
+        signUp: function(e) {
+            e.preventDefault();
+            
+            this.$router.push({path: "registration"});
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
